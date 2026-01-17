@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KathaVaani - AI-powered cultural storytelling platform">
+    <title>KathaVaani | Cultural Storytelling</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg-pattern"></div>
+    <div class="bg-gradient"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">📖</span>
+            <h1>KathaVaani</h1>
+        </div>
+        <p class="tagline">AI-crafted stories rooted in cultural heritage</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Configuration -->
+        <section id="config-section" class="glass-card config-card">
+            <h2 class="section-title">
+                <span class="title-icon">⚙️</span>
+                Story Configuration
+            </h2>
+
+            <form id="story-form" class="config-form">
+
+                <!-- Culture -->
+                <div class="form-group">
+                    <label for="culture-select">🌍 Cultural Origin</label>
+                    <select id="culture-select" required>
+                        <option value="">Select a culture</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Norse">Norse</option>
+                        <option value="African">African</option>
+                    </select>
+                </div>
+
+                <!-- Language -->
+                <div class="form-group">
+                    <label for="language-select">💬 Output Language</label>
+                    <select id="language-select" required>
+                        <option value="">Select a language</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Tamil">Tamil</option>
+                    </select>
+                </div>
+
+                <!-- Theme -->
+                <div class="form-group">
+                    <label for="theme-select">✨ Story Genre</label>
+                    <select id="theme-select" required>
+                        <option value="">Select a genre</option>
+                        <option value="myth">Mythology</option>
+                        <option value="folklore">Folklore</option>
+                        <option value="legend">Legend</option>
+                        <option value="moral tale">Moral Tale</option>
+                        <option value="hero journey">Hero’s Journey</option>
+                    </select>
+                </div>
+
+                <!-- Generate -->
+                <button type="submit" id="generate-btn" class="generate-button">
+                    <span class="btn-text">Create Story</span>
+                    <span class="btn-loading" hidden>
+                        <span class="spinner"></span>
+                        Generating…
+                    </span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Loading -->
+        <section id="loading-section" class="glass-card loading-card" hidden>
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <h3>Crafting Your Story</h3>
+                <p>Drawing from cultural wisdom and imagination…</p>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section id="results-section" class="glass-card results-card" hidden>
+            <div class="results-header">
+                <h2 id="story-title" class="story-title"></h2>
+                <div class="story-meta">
+                    <span class="meta-badge culture-badge" id="culture-value"></span>
+                    <span class="meta-badge language-badge" id="language-value"></span>
+                </div>
+            </div>
+
+            <div class="story-content">
+                <p id="story-text" class="story-text"></p>
+                <div id="story-moral" class="story-moral" hidden>
+                    <span class="moral-icon">💡</span>
+                    <p class="moral-text"></p>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button id="new-story-btn" class="action-button primary">
+                    ➕ New Story
+                </button>
+            </div>
+        </section>
+
+        <!-- Error -->
+        <section id="error-section" class="glass-card error-card" hidden>
+            <h3>Something went wrong</h3>
+            <p id="error-message"></p>
+            <button id="retry-btn" class="action-button primary">Try Again</button>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">🌍 Preserving stories, cultures, and traditions through AI</p>
+            <p class="footer-privacy">🔒 Privacy-first • No data stored</p>
+            <p class="footer-privacy">© 2026 KathaVaani</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
